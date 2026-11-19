@@ -38,7 +38,7 @@ section{padding:82px 0;border-top:1px solid var(--line)}
 .panel h3{font-size:16px;margin:7px 0 10px}.panel p,.panel li{font-size:13px;color:var(--muted)}.panel ul{padding-left:18px;margin-top:12px}.panel li{margin:7px 0}
 .panel-tag{font:10px var(--mono);letter-spacing:1.2px;color:var(--lime);text-transform:uppercase}
 .about-copy p{font-size:14px;color:var(--muted);margin:0 0 15px}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.chip{font-size:10px;color:#d1dcda;background:var(--panel2);border:1px solid var(--line);padding:5px 9px;border-radius:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chip{display:inline-flex;align-items:center;font-size:11px;font-weight:600;line-height:1.35;letter-spacing:.1px;color:#24456f;background:#e7effb;border:1px solid #c7d8f1;padding:6px 10px;border-radius:4px}
 .callout{background:linear-gradient(135deg,#edf3ff,#ffffff 65%);border:1px solid #cbd9f3;border-radius:7px;padding:25px}
 .callout h3{color:var(--lime);font-size:13px;margin-bottom:12px}.callout p{font-size:13px;color:var(--muted)}
 .timeline{border-left:1px solid #52643b;margin-left:7px;padding-left:27px}
@@ -49,7 +49,7 @@ section{padding:82px 0;border-top:1px solid var(--line)}
 .capability{position:relative}.capability .num{font:10px var(--mono);color:var(--lime);letter-spacing:1px}.capability h3{margin:9px 0}.capability ul{padding-left:17px;margin-top:12px}
 .metrics-note{border-left:2px solid var(--lime);padding:12px 16px;color:var(--muted);font-size:12px;margin-top:18px;background:#edf3ff}
 .edu{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.edu strong{font-size:14px}.edu span{font:10px var(--mono);color:var(--lime);white-space:nowrap}
-.contact{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:45px;text-align:center;box-shadow:0 16px 45px rgba(27,55,95,.06)}.contact h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.5px}.contact p{color:var(--muted);font-size:14px;margin:12px auto 25px;max-width:600px}.contact-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap}.contact-links a{color:var(--lime);font-size:13px}
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:45px;text-align:center;box-shadow:0 16px 45px rgba(27,55,95,.06)}.contact h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.5px}.contact p{color:var(--muted);font-size:14px;margin:12px auto 25px;max-width:600px}.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.contact-links a{display:inline-flex;align-items:center;justify-content:center;color:#174da8;background:#eaf1ff;border:1px solid #c6d8fb;border-radius:6px;padding:11px 16px;font-size:15px;font-weight:700;transition:.2s}.contact-links a:hover{background:#dce8ff;border-color:#8eafea;transform:translateY(-2px)}
 footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
 @media(max-width:780px){.nav{align-items:flex-start;flex-direction:column;padding:15px 0}.links{gap:12px}.two,.three{grid-template-columns:1fr 1fr}.hero{padding:78px 0 60px}.hero:after{width:200px;height:200px;right:0}.facts{gap:20px}}
 @media(max-width:560px){.two,.three{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.hero{min-height:auto}.facts{gap:18px}.contact{padding:30px 18px}section{padding:65px 0}}
@@ -104,7 +104,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
 
 <section id="experience">
  <div class="wrap">
-  <div class="section-top"><div class="eyebrow">02 / CAREER</div><h2 class="section-title">Professional experience.</h2><p class="intro">Career history as listed in my résumé. Earlier employment dates can be added when confirmed.</p></div>
+  <div class="section-top"><div class="eyebrow">02 / CAREER</div><h2 class="section-title">Professional experience.</h2></div>
   <div class="timeline">
    <article class="role">
     <div class="role-date">APRIL 2022 — PRESENT</div>
@@ -116,7 +116,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
     </ul>
    </article>
    <article class="role">
-    <div class="role-date">PREVIOUS EXPERIENCE · DATES TO BE ADDED</div>
+    <div class="role-date">PREVIOUS EXPERIENCE</div>
     <h3>Automation QA</h3><h4>Altimetrik India Pvt. Ltd.</h4>
     <ul>
      <li>Worked on API automation using Karate for OnDot and DIGI Bank (DBS) projects.</li>
@@ -125,7 +125,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
     </ul>
    </article>
    <article class="role">
-    <div class="role-date">PREVIOUS EXPERIENCE · DATES TO BE ADDED</div>
+    <div class="role-date">PREVIOUS EXPERIENCE</div>
     <h3>QA Specialist</h3><h4>PTC Software (India) Pvt. Ltd.</h4>
     <ul>
      <li>Worked on Windchill S100D, a product lifecycle management software project.</li>
@@ -133,7 +133,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
     </ul>
    </article>
    <article class="role">
-    <div class="role-date">PREVIOUS EXPERIENCE · DATES TO BE ADDED</div>
+    <div class="role-date">PREVIOUS EXPERIENCE</div>
     <h3>Functional Test Engineer</h3><h4>Amdocs Software India Pvt. Ltd.</h4>
     <ul>
      <li>Worked on an Order Management System for sales and maintenance of telecommunication devices.</li>
@@ -147,7 +147,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
 
 <section id="projects">
  <div class="wrap">
-  <div class="section-top"><div class="eyebrow">03 / PROJECT EXPERIENCE</div><h2 class="section-title">Domains, systems & delivery.</h2><p class="intro">Selected project experience from banking, payments, PLM and telecom. Project descriptions are based on the résumé.</p></div>
+  <div class="section-top"><div class="eyebrow">03 / PROJECT EXPERIENCE</div><h2 class="section-title">Domains, systems & delivery.</h2></div>
   <div class="grid two">
    <article class="panel project">
     <div class="panel-tag">UBS · LIMIT MANAGEMENT</div><h3>LMF — Limit Management Framework</h3>
@@ -216,36 +216,11 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
  </div>
 </section>
 
-<section id="framework">
- <div class="wrap">
-  <div class="section-top"><div class="eyebrow">06 / AUTOMATION FOUNDATIONS</div><h2 class="section-title">Framework practices in my résumé.</h2><p class="intro">The following are explicitly represented in my experience. The diagrams are conceptual views of those practices, not claims about a proprietary framework implementation.</p></div>
-  <div class="grid two">
-   <div class="arch">
-    <h3>UI automation — conceptual flow</h3>
-    <div class="flow">
-     <div class="node">Test scenarios & test cases<small>Functional requirements and regression scenarios</small></div><div class="down">↓</div>
-     <div class="node">Test scripts in automation framework<small>Preparation and maintenance of automated tests</small></div><div class="down">↓</div>
-     <div class="node">Page Object Model + data-driven approach<small>Design pattern and test data strategy</small></div><div class="down">↓</div>
-     <div class="node">Selenium / Serenity execution<small>UI automation and regression</small></div><div class="down">↓</div>
-     <div class="node">Execution report review<small>Review results and improve script defects</small></div>
-    </div>
-   </div>
-   <div class="arch">
-    <h3>API automation — project experience</h3>
-    <div class="flow">
-     <div class="node">API test scenarios<small>OnDot and DIGI Bank project work</small></div><div class="down">↓</div>
-     <div class="node">Karate automation scripts<small>Backend/API automation</small></div><div class="down">↓</div>
-     <div class="node">Java implementation<small>Explicitly used on DIGI Bank</small></div><div class="down">↓</div>
-     <div class="node">Agile team collaboration<small>Scrum updates and functional test discussions</small></div>
-    </div>
-   </div>
-  </div>
- </div>
-</section>
+
 
 <section id="leadership">
  <div class="wrap">
-  <div class="section-top"><div class="eyebrow">07 / TEAM CONTRIBUTION</div><h2 class="section-title">Leadership & collaboration.</h2></div>
+  <div class="section-top"><div class="eyebrow">06 / TEAM CONTRIBUTION</div><h2 class="section-title">Leadership & collaboration.</h2></div>
   <div class="grid two">
    <article class="panel"><h3>Test Lead responsibilities</h3><p>Current Test Lead role at UBS since April 2022, through vendor Synechron. Project work includes UI automation and regression testing for the Limit Management Framework.</p></article>
    <article class="panel"><h3>Team-based delivery</h3><p>Worked in API automation project teams of three on OnDot and four on DIGI Bank, with daily Scrum updates and test scenario discussions with functional teams.</p></article>
@@ -257,10 +232,10 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
 
 <section id="education">
  <div class="wrap">
-  <div class="section-top"><div class="eyebrow">08 / EDUCATION & CERTIFICATION</div><h2 class="section-title">Academic background.</h2></div>
+  <div class="section-top"><div class="eyebrow">07 / EDUCATION & CERTIFICATION</div><h2 class="section-title">Academic background.</h2></div>
   <div class="grid two">
    <div class="panel edu"><div><strong>Bachelor of Engineering — Information Technology</strong><p>Radharaman Institute of Technology & Science, Bhopal</p></div><span>2007–2011</span></div>
-   <div class="panel"><div class="panel-tag">CERTIFICATION SHOWN ON RÉSUMÉ</div><h3>ISTQB Certified Tester — Foundation Level</h3><p>Foundation Level certification badge appears on the résumé.</p></div>
+   <div class="panel"><div class="panel-tag">CERTIFICATION</div><h3>ISTQB Certified Tester — Foundation Level</h3></div>
   </div>
  </div>
 </section>
@@ -268,7 +243,7 @@ footer{padding:25px 0;color:var(--muted);font-size:11px}.foot{display:flex;justi
 <section id="contact">
  <div class="wrap">
   <div class="contact">
-   <div class="eyebrow">09 / GET IN TOUCH</div>
+   <div class="eyebrow">08 / GET IN TOUCH</div>
    <h2>Let's talk about quality engineering.</h2>
    <p>For Test Lead, QA Automation and software quality opportunities, feel free to connect.</p>
    <div class="contact-links">
