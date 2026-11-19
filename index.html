@@ -2,69 +2,980 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alok | Senior QA Engineer</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Alok Ranjan - Senior QA Engineer and SDET specializing in test automation, Playwright, Selenium, Java and API testing.">
+<title>Alok Ranjan | Senior SDET & QA Automation Engineer</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #0b0e11;
+    --surface: #11171c;
+    --surface2: #151d23;
+    --border: #253039;
+    --text: #edf2f3;
+    --muted: #91a0a9;
+    --green: #a3e635;
+    --green-dark: #172310;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11,14,17,.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span, .accent {
+    color: var(--green);
+}
+
+.nav-links {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: .2s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0 90px;
+}
+
+.eyebrow {
+    font-family: 'DM Mono', monospace;
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.12;
+    letter-spacing: -3px;
+    max-width: 850px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-description {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 17px;
+    margin: 27px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: #101609;
+    border-color: var(--green);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border);
+}
+
+.meta-item small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+}
+
+.meta-item strong {
+    font-size: 14px;
+}
+
+section {
+    padding: 85px 0;
+    border-top: 1px solid var(--border);
+}
+
+.section-label {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 40px);
+    letter-spacing: -1.5px;
+    margin-bottom: 35px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 55px;
+}
+
+.about-text {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.about-text p {
+    margin-bottom: 17px;
+}
+
+.highlight-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 27px;
+    border-radius: 7px;
+}
+
+.highlight-card h3 {
+    color: var(--green);
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.highlight-card li {
+    list-style: none;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.highlight-card li:last-child {
+    border: none;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 23px;
+    border-radius: 6px;
+    transition: .2s;
+}
+
+.skill-card:hover, .project-card:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+}
+
+.skill-card h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #bdc9ce;
+}
+
+.experience-item {
+    border-left: 2px solid var(--border);
+    padding: 0 0 35px 28px;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background: var(--green);
+    border-radius: 50%;
+    left: -5.5px;
+    top: 7px;
+}
+
+.experience-date {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+}
+
+.experience-item h3 {
+    font-size: 19px;
+    margin: 8px 0 3px;
+}
+
+.experience-item h4 {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.experience-item ul {
+    padding-left: 19px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.experience-item li {
+    margin-bottom: 8px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 28px;
+    transition: .2s;
+}
+
+.project-number {
+    font-family: 'DM Mono', monospace;
+    color: var(--green);
+    font-size: 12px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    margin: 18px 0 10px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--green);
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.process-card {
+    padding: 22px 15px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.process-card strong {
+    display: block;
+    color: var(--green);
+    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    margin-bottom: 10px;
+}
+
+.process-card h3 {
+    font-size: 14px;
+}
+
+.process-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.cert-card {
+    padding: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-links a {
+    color: var(--green);
+    font-size: 13px;
+}
+
+footer {
+    padding: 30px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media(max-width: 750px) {
+    .nav-content {
+        align-items: flex-start;
+        padding: 18px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-box {
+        padding: 30px 18px;
+    }
+
+    section {
+        padding: 65px 0;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <nav>
-        <h2>ALOK<span>.</span></h2>
-        <div>
+<nav>
+    <div class="container nav-content">
+        <a href="#" class="logo">ALOK<span>.</span></a>
+
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <header>
-        <p>QUALITY ENGINEERING & AUTOMATION</p>
-        <h1>Building Quality<br>Into Every Release.</h1>
-        <h3>Senior QA Engineer | SDET</h3>
-        <p>
-            11+ years of experience in software testing,
-            automation engineering and quality assurance.
+<main>
+
+<!-- HERO -->
+<div class="container">
+    <header class="hero">
+
+        <div class="eyebrow">QUALITY ENGINEERING / TEST AUTOMATION</div>
+
+        <h1>
+            Engineering Quality.<br>
+            <span>Automating Confidence.</span>
+        </h1>
+
+        <p class="hero-description">
+            Hi, I'm Alok Ranjan. A Senior QA Engineer and SDET
+            with 11+ years of experience in software quality
+            engineering, test automation and building scalable
+            automation solutions.
         </p>
-        <a href="#projects">Explore My Work →</a>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+                Explore My Work →
+            </a>
+
+            <a href="resume.pdf" class="btn btn-secondary" download>
+                Download Resume ↓
+            </a>
+        </div>
+
+        <div class="hero-meta">
+
+            <div class="meta-item">
+                <small>EXPERIENCE</small>
+                <strong>11+ Years</strong>
+            </div>
+
+            <div class="meta-item">
+                <small>PRIMARY FOCUS</small>
+                <strong>Automation Engineering</strong>
+            </div>
+
+            <div class="meta-item">
+                <small>LOCATION</small>
+                <strong>Pune, India</strong>
+            </div>
+
+            <div class="meta-item">
+                <small>OPPORTUNITIES</small>
+                <strong>India / International</strong>
+            </div>
+
+        </div>
     </header>
+</div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a QA professional focused on test automation,
-            scalable frameworks and delivering reliable software.
-        </p>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
 
-    <section id="skills">
-        <h2>Technical Expertise</h2>
-        <p>Java | Selenium | Playwright | JavaScript |
-           API Testing | Karate | Git | CI/CD</p>
-    </section>
+    <div class="section-label">01 / ABOUT ME</div>
+    <h2 class="section-title">Beyond finding bugs.</h2>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
+    <div class="about-grid">
 
-        <article>
+        <div class="about-text">
+
+            <p>
+                I am a quality engineering professional with
+                over 11 years of experience in software testing
+                and automation.
+            </p>
+
+            <p>
+                My focus is on designing maintainable automation
+                frameworks, improving test coverage, validating
+                complex business workflows and making software
+                releases more reliable.
+            </p>
+
+            <p>
+                I have experience with Selenium and Java and am
+                expanding my automation expertise with
+                Playwright and JavaScript, alongside API
+                automation using Karate.
+            </p>
+
+            <p>
+                I believe quality engineering is not just about
+                executing test cases. It is about understanding
+                systems, identifying risks and building confidence
+                throughout the software development lifecycle.
+            </p>
+
+        </div>
+
+        <div class="highlight-card">
+            <h3>WHAT I BRING TO THE TABLE</h3>
+
+            <ul>
+                <li>✓ 11+ years of QA experience</li>
+                <li>✓ UI automation framework design</li>
+                <li>✓ API automation and validation</li>
+                <li>✓ Regression strategy and execution</li>
+                <li>✓ Business workflow testing</li>
+                <li>✓ Defect analysis and reporting</li>
+                <li>✓ Quality engineering mindset</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+
+    <div class="section-label">02 / TECHNICAL EXPERTISE</div>
+    <h2 class="section-title">Tools I work with.</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">
+            <h3>UI Automation</h3>
+            <div class="tags">
+                <span class="tag">Selenium</span>
+                <span class="tag">Playwright</span>
+                <span class="tag">Page Object Model</span>
+                <span class="tag">Cross Browser</span>
+                <span class="tag">TestNG</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>Programming</h3>
+            <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">OOP</span>
+                <span class="tag">Collections</span>
+                <span class="tag">Data Structures</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>API Automation</h3>
+            <div class="tags">
+                <span class="tag">Karate</span>
+                <span class="tag">REST API</span>
+                <span class="tag">Postman</span>
+                <span class="tag">JSON</span>
+                <span class="tag">Schema Validation</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>Testing Expertise</h3>
+            <div class="tags">
+                <span class="tag">Functional Testing</span>
+                <span class="tag">Regression</span>
+                <span class="tag">Integration</span>
+                <span class="tag">E2E Testing</span>
+                <span class="tag">UAT</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>DevOps & CI/CD</h3>
+            <div class="tags">
+                <span class="tag">Git</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">CI/CD</span>
+            </div>
+        </div>
+
+        <div class="skill-card">
+            <h3>Tools & Reporting</h3>
+            <div class="tags">
+                <span class="tag">JIRA</span>
+                <span class="tag">Maven</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Allure</span>
+                <span class="tag">HTML Reports</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+
+    <div class="section-label">03 / PROFESSIONAL JOURNEY</div>
+    <h2 class="section-title">Experience that matters.</h2>
+
+    <div class="experience-item">
+
+        <div class="experience-date">ADD YOUR EMPLOYMENT DATES</div>
+
+        <h3>QA Engineer / Senior QA Engineer</h3>
+
+        <h4>UBS | Pune, India</h4>
+
+        <ul>
+            <li>
+                Work on software quality assurance and testing
+                of enterprise applications.
+            </li>
+
+            <li>
+                Develop and maintain UI automation solutions
+                using Selenium and Java.
+            </li>
+
+            <li>
+                Design and execute functional, regression
+                and integration test scenarios.
+            </li>
+
+            <li>
+                Validate complex business workflows and
+                application behaviour.
+            </li>
+
+            <li>
+                Collaborate with developers, business analysts
+                and other stakeholders to improve software quality.
+            </li>
+
+            <li>
+                Analyse defects, investigate failures and
+                support reliable software releases.
+            </li>
+        </ul>
+
+        <!-- Add previous companies and roles here -->
+
+    </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+
+    <div class="section-label">04 / SELECTED WORK</div>
+    <h2 class="section-title">Engineering in action.</h2>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+
+            <div class="project-number">PROJECT 01 / UI AUTOMATION</div>
+
             <h3>Playwright Automation Framework</h3>
-            <p>A reusable automation framework using JavaScript.</p>
-        </article>
 
-        <article>
-            <h3>Karate API Automation Framework</h3>
-            <p>A generic framework for scalable API testing.</p>
-        </article>
-    </section>
+            <p>
+                A reusable JavaScript-based automation framework
+                designed to support scalable end-to-end testing
+                across web applications.
+            </p>
 
-    <section id="contact">
-        <h2>Let's Connect</h2>
-        <p>Open to QA and SDET opportunities.</p>
-        <a href="https://www.linkedin.com/">LinkedIn</a>
-        <a href="https://github.com/">GitHub</a>
-    </section>
+            <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">POM</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">HTML Reports</span>
+            </div>
 
-    <script src="script.js"></script>
+            <a href="https://github.com/ralok50"
+               class="project-link">
+                VIEW GITHUB PROJECT →
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-number">PROJECT 02 / API AUTOMATION</div>
+
+            <h3>Karate API Framework</h3>
+
+            <p>
+                A generic API automation framework for validating
+                REST endpoints, response structures, business
+                rules and reusable regression scenarios.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Karate</span>
+                <span class="tag">Java</span>
+                <span class="tag">REST API</span>
+                <span class="tag">JSON</span>
+                <span class="tag">Maven</span>
+            </div>
+
+            <a href="https://github.com/ralok50"
+               class="project-link">
+                VIEW GITHUB PROJECT →
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-number">PROJECT 03 / FRAMEWORK DESIGN</div>
+
+            <h3>Selenium Automation Framework</h3>
+
+            <p>
+                A structured Selenium automation solution
+                featuring reusable components, test execution
+                management and maintainable test scripts.
+            </p>
+
+            <div class="tags">
+                <span class="tag">Selenium</span>
+                <span class="tag">Java</span>
+                <span class="tag">TestNG</span>
+                <span class="tag">Maven</span>
+            </div>
+
+            <a href="https://github.com/ralok50"
+               class="project-link">
+                VIEW GITHUB PROJECT →
+            </a>
+
+        </div>
+
+        <div class="project-card">
+
+            <div class="project-number">PROJECT 04 / QUALITY METRICS</div>
+
+            <h3>QA Execution Dashboard</h3>
+
+            <p>
+                A visual dashboard concept for monitoring test
+                execution, pass/fail distribution, defect trends
+                and release quality metrics.
+            </p>
+
+            <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Charts</span>
+            </div>
+
+            <a href="https://github.com/ralok50"
+               class="project-link">
+                VIEW GITHUB PROJECT →
+            </a>
+
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- QUALITY PROCESS -->
+<section>
+<div class="container">
+
+    <div class="section-label">05 / MY APPROACH</div>
+    <h2 class="section-title">How I approach quality.</h2>
+
+    <div class="process-grid">
+
+        <div class="process-card">
+            <strong>01 / ANALYSE</strong>
+            <h3>Understand Requirements</h3>
+            <p>Understand business requirements, dependencies and risks.</p>
+        </div>
+
+        <div class="process-card">
+            <strong>02 / DESIGN</strong>
+            <h3>Test Strategy</h3>
+            <p>Identify scenarios, coverage and automation opportunities.</p>
+        </div>
+
+        <div class="process-card">
+            <strong>03 / AUTOMATE</strong>
+            <h3>Build & Execute</h3>
+            <p>Create reusable automation and validate application behaviour.</p>
+        </div>
+
+        <div class="process-card">
+            <strong>04 / IMPROVE</strong>
+            <h3>Measure Quality</h3>
+            <p>Analyse results, defects and improve release confidence.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<div class="container">
+
+    <div class="section-label">06 / CREDENTIALS</div>
+    <h2 class="section-title">Certifications & Education.</h2>
+
+    <div class="projects-grid">
+
+        <div class="cert-card">
+            <strong>Professional Certifications</strong>
+            <p>Add your completed certifications here.</p>
+        </div>
+
+        <div class="cert-card">
+            <strong>Education</strong>
+            <p>Add your degree, university and graduation year.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+    <div class="contact-box">
+
+        <div class="section-label">07 / GET IN TOUCH</div>
+
+        <h2>Let's build better software.</h2>
+
+        <p>
+            Open to Senior QA Engineer, SDET and
+            QA Automation opportunities.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener">
+                LinkedIn ↗
+            </a>
+
+            <a href="https://github.com/ralok50"
+               target="_blank" rel="noopener">
+                GitHub ↗
+            </a>
+
+            <a href="mailto:YOUR_EMAIL@example.com">
+                Email ↗
+            </a>
+
+        </div>
+
+    </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-content">
+
+    <span>© <span id="year"></span> Alok Ranjan</span>
+
+    <span>Designed with a quality-first mindset.</span>
+
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
 </body>
 </html>
