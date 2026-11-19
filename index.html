@@ -4,21 +4,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Alok Ranjan - Senior QA Engineer and SDET specializing in test automation, Playwright, Selenium, Java and API testing.">
-<title>Alok Ranjan | Senior SDET & QA Automation Engineer</title>
+
+<meta name="description" content="Alok Ranjan - Senior SDET, QA Automation Engineer specializing in Selenium, Java, Playwright, JavaScript, API automation and quality engineering.">
+
+<title>Alok Ranjan | Senior SDET</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap');
-
 :root {
     --bg: #0b0e11;
     --surface: #11171c;
-    --surface2: #151d23;
-    --border: #253039;
+    --surface2: #172027;
+    --border: #28343d;
     --text: #edf2f3;
     --muted: #91a0a9;
     --green: #a3e635;
-    --green-dark: #172310;
+    --green-bg: #192610;
 }
 
 * {
@@ -36,12 +40,12 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 .container {
-    width: min(1100px, 90%);
+    width: min(1120px, 90%);
     margin: auto;
 }
 
@@ -49,7 +53,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(11,14,17,.92);
+    background: rgba(11,14,17,.94);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
 }
@@ -62,23 +66,24 @@ nav {
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 800;
     letter-spacing: -1px;
 }
 
-.logo span, .accent {
+.logo span,
+.accent {
     color: var(--green);
 }
 
 .nav-links {
     display: flex;
-    gap: 27px;
-    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--muted);
     transition: .2s;
 }
@@ -88,18 +93,22 @@ nav {
 }
 
 .hero {
-    min-height: 600px;
+    min-height: 610px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 100px 0 90px;
+    padding: 95px 0 80px;
+}
+
+.eyebrow,
+.section-label {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
 }
 
 .eyebrow {
-    font-family: 'DM Mono', monospace;
-    color: var(--green);
-    font-size: 12px;
-    letter-spacing: 2px;
     margin-bottom: 25px;
 }
 
@@ -107,7 +116,7 @@ nav {
     font-size: clamp(42px, 7vw, 76px);
     line-height: 1.12;
     letter-spacing: -3px;
-    max-width: 850px;
+    max-width: 900px;
 }
 
 .hero h1 span {
@@ -115,22 +124,21 @@ nav {
 }
 
 .hero-description {
-    max-width: 650px;
     color: var(--muted);
-    font-size: 17px;
-    margin: 27px 0;
+    font-size: 16px;
+    max-width: 680px;
+    margin: 25px 0;
 }
 
-.hero-buttons {
+.buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 23px;
+    padding: 12px 22px;
     border: 1px solid var(--border);
     border-radius: 5px;
     font-size: 13px;
@@ -148,28 +156,23 @@ nav {
     transform: translateY(-3px);
 }
 
-.btn-secondary:hover {
-    border-color: var(--green);
-    color: var(--green);
-}
-
-.hero-meta {
+.hero-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 60px;
-    padding-top: 30px;
+    gap: 40px;
     border-top: 1px solid var(--border);
+    padding-top: 30px;
+    margin-top: 65px;
 }
 
-.meta-item small {
+.stat small {
     display: block;
     color: var(--muted);
-    font-size: 11px;
+    font-size: 10px;
     font-family: 'DM Mono', monospace;
 }
 
-.meta-item strong {
+.stat strong {
     font-size: 14px;
 }
 
@@ -179,10 +182,6 @@ section {
 }
 
 .section-label {
-    color: var(--green);
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
     margin-bottom: 12px;
 }
 
@@ -192,74 +191,71 @@ section {
     margin-bottom: 35px;
 }
 
-.about-grid {
+.section-description {
+    color: var(--muted);
+    max-width: 700px;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.grid-2 {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 55px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.about-text {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-.about-text p {
-    margin-bottom: 17px;
-}
-
-.highlight-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 27px;
-    border-radius: 7px;
-}
-
-.highlight-card h3 {
-    color: var(--green);
-    font-size: 13px;
-    margin-bottom: 17px;
-}
-
-.highlight-card li {
-    list-style: none;
-    padding: 9px 0;
-    border-bottom: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.highlight-card li:last-child {
-    border: none;
-}
-
-.skills-grid {
+.grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 16px;
 }
 
-.skill-card {
+.card {
     background: var(--surface);
     border: 1px solid var(--border);
-    padding: 23px;
-    border-radius: 6px;
-    transition: .2s;
+    padding: 25px;
+    border-radius: 7px;
+    transition: .25s;
 }
 
-.skill-card:hover, .project-card:hover {
+.card:hover {
     border-color: var(--green);
     transform: translateY(-4px);
 }
 
-.skill-card h3 {
-    font-size: 15px;
-    margin-bottom: 15px;
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.card p,
+.card li {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.card ul {
+    padding-left: 18px;
+}
+
+.card li {
+    margin: 8px 0;
+}
+
+.card-label {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 13px;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 17px;
 }
 
 .tag {
@@ -267,8 +263,49 @@ section {
     border: 1px solid var(--border);
     padding: 5px 10px;
     border-radius: 3px;
-    font-size: 11px;
-    color: #bdc9ce;
+    font-size: 10px;
+    color: #c2cdd2;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 45px;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+.highlight {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.highlight h3 {
+    color: var(--green);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.highlight li {
+    list-style: none;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.skill-card {
+    min-height: 160px;
+}
+
+.skill-card h3 {
+    font-size: 15px;
 }
 
 .experience-item {
@@ -277,15 +314,15 @@ section {
     position: relative;
 }
 
-.experience-item::before {
+.experience-item:before {
     content: '';
     position: absolute;
-    width: 9px;
-    height: 9px;
-    background: var(--green);
-    border-radius: 50%;
-    left: -5.5px;
+    left: -5px;
     top: 7px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: var(--green);
 }
 
 .experience-date {
@@ -295,8 +332,8 @@ section {
 }
 
 .experience-item h3 {
-    font-size: 19px;
-    margin: 8px 0 3px;
+    font-size: 20px;
+    margin: 7px 0;
 }
 
 .experience-item h4 {
@@ -307,116 +344,161 @@ section {
 }
 
 .experience-item ul {
-    padding-left: 19px;
+    padding-left: 20px;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .experience-item li {
     margin-bottom: 8px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
 }
 
-.project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    padding: 28px;
-    transition: .2s;
+.project-card .project-link {
+    color: var(--green);
+    font-size: 11px;
+    margin-top: auto;
+    padding-top: 20px;
 }
 
 .project-number {
-    font-family: 'DM Mono', monospace;
     color: var(--green);
-    font-size: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
 }
 
 .project-card h3 {
-    font-size: 20px;
-    margin: 18px 0 10px;
+    margin: 17px 0 10px;
 }
 
-.project-card p {
-    color: var(--muted);
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.project-link {
-    display: inline-block;
-    color: var(--green);
-    font-size: 12px;
-    margin-top: 22px;
-}
-
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-}
-
-.process-card {
-    padding: 22px 15px;
-    background: var(--surface);
+.architecture {
+    background: #0e1519;
     border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 28px;
+    overflow-x: auto;
+}
+
+.architecture h3 {
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.arch-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    min-width: 280px;
+}
+
+.arch-box {
+    width: min(100%, 420px);
+    text-align: center;
+    background: var(--surface2);
+    border: 1px solid #3a4b53;
     border-radius: 5px;
+    padding: 12px;
+    font-size: 12px;
 }
 
-.process-card strong {
+.arch-box span {
     display: block;
-    color: var(--green);
-    font-size: 12px;
-    font-family: 'DM Mono', monospace;
-    margin-bottom: 10px;
-}
-
-.process-card h3 {
-    font-size: 14px;
-}
-
-.process-card p {
     color: var(--muted);
-    font-size: 12px;
-    margin-top: 8px;
+    font-size: 10px;
 }
 
-.cert-card {
-    padding: 20px;
+.arch-arrow {
+    color: var(--green);
+    font-size: 17px;
+}
+
+.evaluation-card {
+    padding: 25px;
     background: var(--surface);
     border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.evaluation-number {
+    color: var(--green);
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+}
+
+.evaluation-card h3 {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.evaluation-card p {
     color: var(--muted);
     font-size: 13px;
-    border-radius: 5px;
+}
+
+.evaluation-card ul {
+    padding-left: 18px;
+    margin-top: 15px;
+}
+
+.evaluation-card li {
+    color: #bdc9ce;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.metric-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 22px;
+}
+
+.metric-card h3 {
+    font-size: 14px;
+}
+
+.metric-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.metric-note {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 12px;
 }
 
 .contact-box {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 50px;
     text-align: center;
+    padding: 55px 25px;
 }
 
 .contact-box h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 12px;
 }
 
 .contact-box p {
     color: var(--muted);
+    font-size: 14px;
     margin-bottom: 25px;
 }
 
 .contact-links {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 22px;
 }
 
 .contact-links a {
@@ -425,53 +507,56 @@ section {
 }
 
 footer {
-    padding: 30px 0;
-    border-top: 1px solid var(--border);
+    padding: 25px 0;
     color: var(--muted);
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
-@media(max-width: 750px) {
+@media(max-width: 800px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
     .nav-content {
         align-items: flex-start;
-        padding: 18px 0;
         flex-direction: column;
-        gap: 15px;
+        padding: 16px 0;
+        gap: 14px;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-        gap: 15px;
+        gap: 13px;
+    }
+}
+
+@media(max-width: 550px) {
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
     }
 
     .hero {
         min-height: auto;
-        padding: 80px 0;
+        padding: 75px 0;
     }
 
     .hero h1 {
         letter-spacing: -2px;
     }
 
-    .about-grid,
-    .skills-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-box {
-        padding: 30px 18px;
+    .hero-stats {
+        gap: 22px;
     }
 
     section {
@@ -484,76 +569,81 @@ footer {
 <body>
 
 <nav>
-    <div class="container nav-content">
-        <a href="#" class="logo">ALOK<span>.</span></a>
+<div class="container nav-content">
+    <a href="#" class="logo">ALOK<span>.</span></a>
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#evaluation">SDET Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
+</div>
 </nav>
 
-<main>
-
 <!-- HERO -->
+
 <div class="container">
-    <header class="hero">
+<header class="hero">
 
-        <div class="eyebrow">QUALITY ENGINEERING / TEST AUTOMATION</div>
+    <div class="eyebrow">
+        SENIOR QA ENGINEER / SDET / QUALITY ENGINEERING
+    </div>
 
-        <h1>
-            Engineering Quality.<br>
-            <span>Automating Confidence.</span>
-        </h1>
+    <h1>
+        Engineering Quality.<br>
+        <span>Automating Confidence.</span>
+    </h1>
 
-        <p class="hero-description">
-            Hi, I'm Alok Ranjan. A Senior QA Engineer and SDET
-            with 11+ years of experience in software quality
-            engineering, test automation and building scalable
-            automation solutions.
-        </p>
+    <p class="hero-description">
+        Hi, I'm Alok Ranjan. A QA professional with 11+ years
+        of experience in software testing, automation engineering
+        and enterprise application quality assurance.
+        Focused on building scalable automation frameworks,
+        improving test coverage and delivering reliable software.
+    </p>
 
-        <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-                Explore My Work →
-            </a>
+    <div class="buttons">
+        <a href="#projects" class="btn btn-primary">
+            Explore My Work →
+        </a>
 
-            <a href="resume.pdf" class="btn btn-secondary" download>
-                Download Resume ↓
-            </a>
+        <a href="resume.pdf" class="btn">
+            Download Resume ↓
+        </a>
+    </div>
+
+    <div class="hero-stats">
+
+        <div class="stat">
+            <small>EXPERIENCE</small>
+            <strong>11+ Years</strong>
         </div>
 
-        <div class="hero-meta">
-
-            <div class="meta-item">
-                <small>EXPERIENCE</small>
-                <strong>11+ Years</strong>
-            </div>
-
-            <div class="meta-item">
-                <small>PRIMARY FOCUS</small>
-                <strong>Automation Engineering</strong>
-            </div>
-
-            <div class="meta-item">
-                <small>LOCATION</small>
-                <strong>Pune, India</strong>
-            </div>
-
-            <div class="meta-item">
-                <small>OPPORTUNITIES</small>
-                <strong>India / International</strong>
-            </div>
-
+        <div class="stat">
+            <small>UI AUTOMATION</small>
+            <strong>Selenium / Playwright</strong>
         </div>
-    </header>
+
+        <div class="stat">
+            <small>PROGRAMMING</small>
+            <strong>Java / JavaScript</strong>
+        </div>
+
+        <div class="stat">
+            <small>LOCATION</small>
+            <strong>Pune, India</strong>
+        </div>
+
+    </div>
+</header>
 </div>
 
 <!-- ABOUT -->
+
 <section id="about">
 <div class="container">
 
@@ -571,39 +661,38 @@ footer {
             </p>
 
             <p>
-                My focus is on designing maintainable automation
-                frameworks, improving test coverage, validating
-                complex business workflows and making software
-                releases more reliable.
+                My professional focus includes UI automation,
+                API validation, regression testing, framework
+                design and enterprise application testing.
             </p>
 
             <p>
-                I have experience with Selenium and Java and am
+                I have worked with Selenium and Java and am
                 expanding my automation expertise with
                 Playwright and JavaScript, alongside API
                 automation using Karate.
             </p>
 
             <p>
-                I believe quality engineering is not just about
-                executing test cases. It is about understanding
-                systems, identifying risks and building confidence
-                throughout the software development lifecycle.
+                I believe quality engineering is about more than
+                test execution. It involves understanding business
+                requirements, identifying risks, designing effective
+                test strategies and building confidence in software.
             </p>
 
         </div>
 
-        <div class="highlight-card">
-            <h3>WHAT I BRING TO THE TABLE</h3>
+        <div class="highlight">
+            <h3>CORE PROFESSIONAL STRENGTHS</h3>
 
             <ul>
-                <li>✓ 11+ years of QA experience</li>
-                <li>✓ UI automation framework design</li>
-                <li>✓ API automation and validation</li>
-                <li>✓ Regression strategy and execution</li>
-                <li>✓ Business workflow testing</li>
-                <li>✓ Defect analysis and reporting</li>
-                <li>✓ Quality engineering mindset</li>
+                <li>✓ Automation framework development</li>
+                <li>✓ Enterprise application testing</li>
+                <li>✓ API and integration testing</li>
+                <li>✓ Test strategy and planning</li>
+                <li>✓ Regression automation</li>
+                <li>✓ Defect investigation</li>
+                <li>✓ Quality ownership</li>
             </ul>
         </div>
 
@@ -612,37 +701,38 @@ footer {
 </section>
 
 <!-- SKILLS -->
+
 <section id="skills">
 <div class="container">
 
     <div class="section-label">02 / TECHNICAL EXPERTISE</div>
-    <h2 class="section-title">Tools I work with.</h2>
+    <h2 class="section-title">My technical toolkit.</h2>
 
-    <div class="skills-grid">
+    <div class="grid-3">
 
-        <div class="skill-card">
+        <div class="card skill-card">
             <h3>UI Automation</h3>
             <div class="tags">
                 <span class="tag">Selenium</span>
                 <span class="tag">Playwright</span>
-                <span class="tag">Page Object Model</span>
-                <span class="tag">Cross Browser</span>
+                <span class="tag">POM</span>
                 <span class="tag">TestNG</span>
+                <span class="tag">Cross Browser</span>
             </div>
         </div>
 
-        <div class="skill-card">
+        <div class="card skill-card">
             <h3>Programming</h3>
             <div class="tags">
                 <span class="tag">Java</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">OOP</span>
                 <span class="tag">Collections</span>
-                <span class="tag">Data Structures</span>
+                <span class="tag">DSA</span>
             </div>
         </div>
 
-        <div class="skill-card">
+        <div class="card skill-card">
             <h3>API Automation</h3>
             <div class="tags">
                 <span class="tag">Karate</span>
@@ -653,36 +743,36 @@ footer {
             </div>
         </div>
 
-        <div class="skill-card">
-            <h3>Testing Expertise</h3>
+        <div class="card skill-card">
+            <h3>Testing</h3>
             <div class="tags">
-                <span class="tag">Functional Testing</span>
+                <span class="tag">Functional</span>
                 <span class="tag">Regression</span>
                 <span class="tag">Integration</span>
-                <span class="tag">E2E Testing</span>
+                <span class="tag">E2E</span>
                 <span class="tag">UAT</span>
             </div>
         </div>
 
-        <div class="skill-card">
-            <h3>DevOps & CI/CD</h3>
+        <div class="card skill-card">
+            <h3>CI/CD & DevOps</h3>
             <div class="tags">
                 <span class="tag">Git</span>
                 <span class="tag">GitHub</span>
                 <span class="tag">Jenkins</span>
                 <span class="tag">GitHub Actions</span>
-                <span class="tag">CI/CD</span>
+                <span class="tag">Maven</span>
             </div>
         </div>
 
-        <div class="skill-card">
+        <div class="card skill-card">
             <h3>Tools & Reporting</h3>
             <div class="tags">
                 <span class="tag">JIRA</span>
-                <span class="tag">Maven</span>
                 <span class="tag">SQL</span>
                 <span class="tag">Allure</span>
                 <span class="tag">HTML Reports</span>
+                <span class="tag">Browser DevTools</span>
             </div>
         </div>
 
@@ -691,104 +781,517 @@ footer {
 </section>
 
 <!-- EXPERIENCE -->
+
 <section id="experience">
 <div class="container">
 
-    <div class="section-label">03 / PROFESSIONAL JOURNEY</div>
-    <h2 class="section-title">Experience that matters.</h2>
+    <div class="section-label">03 / PROFESSIONAL EXPERIENCE</div>
+    <h2 class="section-title">My professional journey.</h2>
 
     <div class="experience-item">
 
-        <div class="experience-date">ADD YOUR EMPLOYMENT DATES</div>
+        <div class="experience-date">
+            ADD EMPLOYMENT DATES
+        </div>
 
         <h3>QA Engineer / Senior QA Engineer</h3>
 
         <h4>UBS | Pune, India</h4>
 
         <ul>
-            <li>
-                Work on software quality assurance and testing
-                of enterprise applications.
-            </li>
-
-            <li>
-                Develop and maintain UI automation solutions
-                using Selenium and Java.
-            </li>
-
-            <li>
-                Design and execute functional, regression
-                and integration test scenarios.
-            </li>
-
-            <li>
-                Validate complex business workflows and
-                application behaviour.
-            </li>
-
-            <li>
-                Collaborate with developers, business analysts
-                and other stakeholders to improve software quality.
-            </li>
-
-            <li>
-                Analyse defects, investigate failures and
-                support reliable software releases.
-            </li>
+            <li>Perform software quality assurance for enterprise applications.</li>
+            <li>Develop and maintain UI automation using Selenium and Java.</li>
+            <li>Design and execute functional, regression and integration tests.</li>
+            <li>Validate complex business workflows and application behaviour.</li>
+            <li>Investigate defects and collaborate with development teams.</li>
+            <li>Contribute to improving automation coverage and release quality.</li>
         </ul>
 
-        <!-- Add previous companies and roles here -->
+    </div>
+
+    <!-- Add previous companies and roles here -->
+
+</div>
+</section>
+
+<!-- FRAMEWORK ARCHITECTURE -->
+
+<section id="architecture">
+<div class="container">
+
+    <div class="section-label">04 / FRAMEWORK ENGINEERING</div>
+    <h2 class="section-title">How I design automation frameworks.</h2>
+
+    <p class="section-description">
+        A well-designed framework should be reusable, maintainable,
+        scalable and easy for other engineers to contribute to.
+    </p>
+
+    <div class="grid-2">
+
+        <div class="architecture">
+            <h3>UI Automation Architecture</h3>
+
+            <div class="arch-flow">
+
+                <div class="arch-box">
+                    Test Specifications
+                    <span>Test scenarios and execution configuration</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Test Runner
+                    <span>Playwright Test / TestNG</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Page Object Model
+                    <span>Pages, components and locators</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Reusable Utilities
+                    <span>Waits, assertions, data and helpers</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Browser Automation
+                    <span>Selenium / Playwright</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Reporting & Logging
+                    <span>Execution results, screenshots and traces</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="architecture">
+            <h3>API Automation Architecture</h3>
+
+            <div class="arch-flow">
+
+                <div class="arch-box">
+                    API Test Scenarios
+                    <span>Positive, negative and boundary tests</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Test Runner
+                    <span>Karate / Maven</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Reusable API Features
+                    <span>Common requests and authentication</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Request & Response Validation
+                    <span>Status, headers, payload and schema</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Business Rule Assertions
+                    <span>Data integrity and business validation</span>
+                </div>
+
+                <div class="arch-arrow">↓</div>
+
+                <div class="arch-box">
+                    Reports & CI/CD
+                    <span>Execution history and failure analysis</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-2" style="margin-top:20px">
+
+        <div class="card">
+            <h3>Framework Design Principles</h3>
+            <ul>
+                <li>Separation of test logic and application logic.</li>
+                <li>Reusable components and utilities.</li>
+                <li>Environment-based configuration.</li>
+                <li>Centralized test data management.</li>
+                <li>Parallel execution and scalability.</li>
+                <li>Consistent reporting and logging.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Design Patterns</h3>
+            <ul>
+                <li>Page Object Model for UI automation.</li>
+                <li>Factory Pattern for object creation where appropriate.</li>
+                <li>Singleton Pattern for controlled shared instances where justified.</li>
+                <li>Builder Pattern for complex test data.</li>
+                <li>Strategy Pattern for interchangeable behaviours.</li>
+                <li>Dependency Injection for test component management.</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- RECRUITER EVALUATION -->
+
+<section id="evaluation">
+<div class="container">
+
+    <div class="section-label">05 / SDET CAPABILITIES</div>
+
+    <h2 class="section-title">
+        What defines a strong SDET.
+    </h2>
+
+    <p class="section-description">
+        My approach to the core engineering competencies
+        expected from a senior automation engineer.
+    </p>
+
+    <div class="grid-2">
+
+        <!-- 1 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">01 / FRAMEWORK ARCHITECTURE</div>
+
+            <h3>Building scalable frameworks</h3>
+
+            <p>
+                Designing automation frameworks that are
+                maintainable, reusable and suitable for
+                enterprise-level applications.
+            </p>
+
+            <ul>
+                <li>Framework architecture and folder structure.</li>
+                <li>Reusable page objects and components.</li>
+                <li>Configuration and environment management.</li>
+                <li>Test data and dependency management.</li>
+                <li>Parallel execution and reporting.</li>
+            </ul>
+        </div>
+
+        <!-- 2 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">02 / DESIGN PATTERNS</div>
+
+            <h3>Writing maintainable code</h3>
+
+            <p>
+                Applying object-oriented principles and
+                appropriate design patterns to build
+                clean automation solutions.
+            </p>
+
+            <ul>
+                <li>Page Object Model.</li>
+                <li>Factory Pattern.</li>
+                <li>Singleton Pattern where appropriate.</li>
+                <li>Builder and Strategy Patterns.</li>
+                <li>Encapsulation, inheritance and polymorphism.</li>
+            </ul>
+        </div>
+
+        <!-- 3 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">03 / CODING ABILITY</div>
+
+            <h3>Strong programming fundamentals</h3>
+
+            <p>
+                Understanding programming fundamentals
+                to develop robust test automation and
+                solve complex engineering problems.
+            </p>
+
+            <ul>
+                <li>Java and JavaScript fundamentals.</li>
+                <li>Object-oriented programming.</li>
+                <li>Collections, arrays, strings and maps.</li>
+                <li>Exception handling and debugging.</li>
+                <li>Data structures and algorithms.</li>
+                <li>Clean code and code reusability.</li>
+            </ul>
+        </div>
+
+        <!-- 4 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">04 / API TESTING</div>
+
+            <h3>Beyond UI automation</h3>
+
+            <p>
+                Validating service-level functionality,
+                integrations, data integrity and
+                business rules.
+            </p>
+
+            <ul>
+                <li>REST API testing.</li>
+                <li>Authentication and authorization.</li>
+                <li>Request and response validation.</li>
+                <li>JSON schema validation.</li>
+                <li>Negative and boundary testing.</li>
+                <li>Database and data integrity checks.</li>
+            </ul>
+        </div>
+
+        <!-- 5 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">05 / CI/CD</div>
+
+            <h3>Automation in delivery pipelines</h3>
+
+            <p>
+                Integrating automated tests into continuous
+                integration workflows to provide
+                faster feedback.
+            </p>
+
+            <ul>
+                <li>Git and version control.</li>
+                <li>Jenkins / GitHub Actions.</li>
+                <li>Build and test execution pipelines.</li>
+                <li>Environment-specific execution.</li>
+                <li>Scheduled regression suites.</li>
+                <li>Test reports and pipeline failure notifications.</li>
+            </ul>
+        </div>
+
+        <!-- 6 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">06 / DEBUGGING</div>
+
+            <h3>Finding the root cause</h3>
+
+            <p>
+                Investigating automation failures and
+                distinguishing genuine product defects
+                from test instability.
+            </p>
+
+            <ul>
+                <li>Failure analysis and root cause investigation.</li>
+                <li>Flaky test identification.</li>
+                <li>Playwright traces and screenshots.</li>
+                <li>Browser console and network analysis.</li>
+                <li>Log analysis and debugging.</li>
+                <li>Reliable synchronization and wait strategies.</li>
+            </ul>
+        </div>
+
+        <!-- 7 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">07 / TEST STRATEGY</div>
+
+            <h3>Quality and risk management</h3>
+
+            <p>
+                Designing test approaches that prioritize
+                business-critical functionality and
+                maximize meaningful test coverage.
+            </p>
+
+            <ul>
+                <li>Risk-based testing.</li>
+                <li>Test planning and estimation.</li>
+                <li>Regression test selection.</li>
+                <li>Integration and end-to-end coverage.</li>
+                <li>Boundary and negative scenarios.</li>
+                <li>Defect prioritization and triage.</li>
+            </ul>
+        </div>
+
+        <!-- 8 -->
+
+        <div class="evaluation-card">
+            <div class="evaluation-number">08 / LEADERSHIP</div>
+
+            <h3>Ownership and collaboration</h3>
+
+            <p>
+                Contributing beyond individual test execution
+                through technical collaboration and
+                quality ownership.
+            </p>
+
+            <ul>
+                <li>Mentoring and knowledge sharing.</li>
+                <li>Code reviews and framework reviews.</li>
+                <li>Technical decision-making.</li>
+                <li>Cross-team collaboration.</li>
+                <li>Release quality ownership.</li>
+                <li>Continuous process improvement.</li>
+            </ul>
+        </div>
 
     </div>
 </div>
 </section>
 
+<!-- METRICS -->
+
+<section id="metrics">
+<div class="container">
+
+    <div class="section-label">06 / ENGINEERING MEASUREMENT</div>
+
+    <h2 class="section-title">Quality should be measurable.</h2>
+
+    <p class="section-description">
+        Metrics I consider important when evaluating
+        automation effectiveness and release quality.
+    </p>
+
+    <div class="grid-3">
+
+        <div class="metric-card">
+            <div class="card-label">01 / EXECUTION</div>
+            <h3>Test Execution Time</h3>
+            <p>
+                Measure execution duration and improvements
+                achieved through parallelization and optimization.
+            </p>
+        </div>
+
+        <div class="metric-card">
+            <div class="card-label">02 / COVERAGE</div>
+            <h3>Automation Coverage</h3>
+            <p>
+                Track automated scenarios against eligible
+                regression test scenarios.
+            </p>
+        </div>
+
+        <div class="metric-card">
+            <div class="card-label">03 / QUALITY</div>
+            <h3>Defect Leakage</h3>
+            <p>
+                Monitor defects discovered after release
+                compared with defects found before release.
+            </p>
+        </div>
+
+        <div class="metric-card">
+            <div class="card-label">04 / STABILITY</div>
+            <h3>Flaky Test Rate</h3>
+            <p>
+                Identify unstable automated tests and
+                improve execution reliability.
+            </p>
+        </div>
+
+        <div class="metric-card">
+            <div class="card-label">05 / EFFICIENCY</div>
+            <h3>Pass / Fail Distribution</h3>
+            <p>
+                Analyse execution results and investigate
+                genuine failures and infrastructure issues.
+            </p>
+        </div>
+
+        <div class="metric-card">
+            <div class="card-label">06 / DELIVERY</div>
+            <h3>Release Quality</h3>
+            <p>
+                Evaluate release readiness using test
+                results, critical defects and risk exposure.
+            </p>
+        </div>
+
+    </div>
+
+    <p class="metric-note">
+        Note: Actual performance metrics and historical
+        achievements can be added once validated against
+        project execution data.
+    </p>
+
+</div>
+</section>
+
 <!-- PROJECTS -->
+
 <section id="projects">
 <div class="container">
 
-    <div class="section-label">04 / SELECTED WORK</div>
-    <h2 class="section-title">Engineering in action.</h2>
+    <div class="section-label">07 / SELECTED ENGINEERING WORK</div>
 
-    <div class="projects-grid">
+    <h2 class="section-title">Projects and implementations.</h2>
 
-        <div class="project-card">
+    <div class="grid-2">
+
+        <div class="card project-card">
 
             <div class="project-number">PROJECT 01 / UI AUTOMATION</div>
 
-            <h3>Playwright Automation Framework</h3>
+            <h3>Playwright JavaScript Framework</h3>
 
             <p>
-                A reusable JavaScript-based automation framework
-                designed to support scalable end-to-end testing
-                across web applications.
+                A reusable browser automation framework
+                focused on maintainability, reusable components,
+                cross-browser testing and CI/CD integration.
             </p>
 
             <div class="tags">
                 <span class="tag">Playwright</span>
                 <span class="tag">JavaScript</span>
                 <span class="tag">POM</span>
+                <span class="tag">Fixtures</span>
                 <span class="tag">CI/CD</span>
-                <span class="tag">HTML Reports</span>
             </div>
 
-            <a href="https://github.com/ralok50"
-               class="project-link">
-                VIEW GITHUB PROJECT →
+            <a class="project-link"
+               href="https://github.com/ralok50"
+               target="_blank" rel="noopener">
+                VIEW SOURCE CODE →
             </a>
 
         </div>
 
-        <div class="project-card">
+        <div class="card project-card">
 
             <div class="project-number">PROJECT 02 / API AUTOMATION</div>
 
             <h3>Karate API Framework</h3>
 
             <p>
-                A generic API automation framework for validating
-                REST endpoints, response structures, business
-                rules and reusable regression scenarios.
+                A generic API automation framework covering
+                REST endpoints, authentication, reusable
+                feature files and business rule validation.
             </p>
 
             <div class="tags">
@@ -799,23 +1302,24 @@ footer {
                 <span class="tag">Maven</span>
             </div>
 
-            <a href="https://github.com/ralok50"
-               class="project-link">
-                VIEW GITHUB PROJECT →
+            <a class="project-link"
+               href="https://github.com/ralok50"
+               target="_blank" rel="noopener">
+                VIEW SOURCE CODE →
             </a>
 
         </div>
 
-        <div class="project-card">
+        <div class="card project-card">
 
-            <div class="project-number">PROJECT 03 / FRAMEWORK DESIGN</div>
+            <div class="project-number">PROJECT 03 / UI AUTOMATION</div>
 
-            <h3>Selenium Automation Framework</h3>
+            <h3>Selenium Java Framework</h3>
 
             <p>
-                A structured Selenium automation solution
-                featuring reusable components, test execution
-                management and maintainable test scripts.
+                Structured Selenium automation with reusable
+                components, page objects, test management
+                and reporting.
             </p>
 
             <div class="tags">
@@ -825,23 +1329,24 @@ footer {
                 <span class="tag">Maven</span>
             </div>
 
-            <a href="https://github.com/ralok50"
-               class="project-link">
-                VIEW GITHUB PROJECT →
+            <a class="project-link"
+               href="https://github.com/ralok50"
+               target="_blank" rel="noopener">
+                VIEW SOURCE CODE →
             </a>
 
         </div>
 
-        <div class="project-card">
+        <div class="card project-card">
 
-            <div class="project-number">PROJECT 04 / QUALITY METRICS</div>
+            <div class="project-number">PROJECT 04 / QUALITY ANALYTICS</div>
 
             <h3>QA Execution Dashboard</h3>
 
             <p>
-                A visual dashboard concept for monitoring test
-                execution, pass/fail distribution, defect trends
-                and release quality metrics.
+                A dashboard concept to visualize execution
+                statistics, automation coverage, defect trends
+                and release quality indicators.
             </p>
 
             <div class="tags">
@@ -851,9 +1356,10 @@ footer {
                 <span class="tag">Charts</span>
             </div>
 
-            <a href="https://github.com/ralok50"
-               class="project-link">
-                VIEW GITHUB PROJECT →
+            <a class="project-link"
+               href="https://github.com/ralok50"
+               target="_blank" rel="noopener">
+                VIEW SOURCE CODE →
             </a>
 
         </div>
@@ -862,59 +1368,24 @@ footer {
 </div>
 </section>
 
-<!-- QUALITY PROCESS -->
-<section>
-<div class="container">
-
-    <div class="section-label">05 / MY APPROACH</div>
-    <h2 class="section-title">How I approach quality.</h2>
-
-    <div class="process-grid">
-
-        <div class="process-card">
-            <strong>01 / ANALYSE</strong>
-            <h3>Understand Requirements</h3>
-            <p>Understand business requirements, dependencies and risks.</p>
-        </div>
-
-        <div class="process-card">
-            <strong>02 / DESIGN</strong>
-            <h3>Test Strategy</h3>
-            <p>Identify scenarios, coverage and automation opportunities.</p>
-        </div>
-
-        <div class="process-card">
-            <strong>03 / AUTOMATE</strong>
-            <h3>Build & Execute</h3>
-            <p>Create reusable automation and validate application behaviour.</p>
-        </div>
-
-        <div class="process-card">
-            <strong>04 / IMPROVE</strong>
-            <h3>Measure Quality</h3>
-            <p>Analyse results, defects and improve release confidence.</p>
-        </div>
-
-    </div>
-</div>
-</section>
-
 <!-- CERTIFICATIONS -->
+
 <section id="certifications">
 <div class="container">
 
-    <div class="section-label">06 / CREDENTIALS</div>
-    <h2 class="section-title">Certifications & Education.</h2>
+    <div class="section-label">08 / CREDENTIALS</div>
+    <h2 class="section-title">Certifications and education.</h2>
 
-    <div class="projects-grid">
+    <div class="grid-2">
 
-        <div class="cert-card">
-            <strong>Professional Certifications</strong>
-            <p>Add your completed certifications here.</p>
+        <div class="card">
+            <h3>Certifications</h3>
+            <p>Add completed technical certifications,
+            issuing organizations and years.</p>
         </div>
 
-        <div class="cert-card">
-            <strong>Education</strong>
+        <div class="card">
+            <h3>Education</h3>
             <p>Add your degree, university and graduation year.</p>
         </div>
 
@@ -924,30 +1395,32 @@ footer {
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact">
 <div class="container">
 
     <div class="contact-box">
 
-        <div class="section-label">07 / GET IN TOUCH</div>
+        <div class="section-label">09 / CONTACT</div>
 
         <h2>Let's build better software.</h2>
 
         <p>
             Open to Senior QA Engineer, SDET and
-            QA Automation opportunities.
+            QA Automation opportunities in India
+            and internationally.
         </p>
 
         <div class="contact-links">
 
-            <a href="https://www.linkedin.com/"
-               target="_blank" rel="noopener">
-                LinkedIn ↗
-            </a>
-
             <a href="https://github.com/ralok50"
                target="_blank" rel="noopener">
                 GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/"
+               target="_blank" rel="noopener">
+                LinkedIn ↗
             </a>
 
             <a href="mailto:YOUR_EMAIL@example.com">
@@ -957,17 +1430,18 @@ footer {
         </div>
 
     </div>
+
 </div>
 </section>
 
-</main>
+</body>
 
 <footer>
 <div class="container footer-content">
 
     <span>© <span id="year"></span> Alok Ranjan</span>
 
-    <span>Designed with a quality-first mindset.</span>
+    <span>Quality Engineering | Automation | SDET</span>
 
 </div>
 </footer>
@@ -977,5 +1451,4 @@ document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
 
-</body>
 </html>
